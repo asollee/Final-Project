@@ -1,5 +1,17 @@
 // Two Realms - Final Project
 
+/* 
+Fullscreen shot of dollhouse appears. have a separate button that controls zoom?, 
+if pressed in the beginning, the camera zooms into first room (probably the room 
+in center of dollhouse, or the doorway/hallway). If button is clicked again, then 
+zooms out and vice versa. Using arrow keys, can control the pan of the camera 
+as user can move from room to room (one click slide? or more controlled taps?). 
+Spacebar = "flipping" the realms/ entering the "Upside Down"
+
+inspiration: Stranger Things, BTS WINGS short film: MAMA, Iron's System mv, 
+Gone Home game, The Doll People (for dollhouse look), darker Alice in Wonderland, joke mv
+*/
+
 boolean Parent_show = true;
 boolean Other_show = false;
 Parent parent;
