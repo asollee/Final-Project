@@ -1,3 +1,46 @@
+// Other Realm
+// black/dark, dirty, forsaken, horrendous, frightful, mysterious, 
+
+/*
+Have all the rooms in Other class as methods, 
+ and then in main call each method according to the room..?
+ 
+ BUT THEN, have to have functions inside functions because need to create 
+ inside each room
+ 
+ room = method
+ objects and parts of room in each method..?
+ 
+ - slaughterhouse room / kitchen (blue/gray/black tint to room; dirty with dirt, blood,
+ feathers, dust; workbench style table with chicken and knife, when clicked the knife
+ decapitates the chicken; faint, blue and orange fire at stove; giant carved cow 
+ carcass on right side, swings and twirls slightly when clicked); 
+ - dining room (dark mad tea party from Alice in Wonderland; dark with few candles 
+ that flicker; long dining table with white sheetcloth stretches forever into the screen; 
+ plates and silver ware; big, whole pig in the center, head can be removed with mouse 
+ by dragging and behind the head can "see" into carcass?)
+ - bed room (four or five metal, jail beds, can uncover the sheets with a click and find
+ objects in each bed (knife, dirty teddy bear, old photograph, key, etc.); stone floors
+ like a jail cell; dirty and cracked windows like in joke mv)
+ - asylum room / art room (use inspiration and instrumental audio from MAMA; script/words will be 
+ layered with other layers of artworks and words; neon/high contrast color palette; 
+ have animation match to song if possible? like in the video; paint dripping down the
+ paintings and walls)
+ - bathroom (blue/gray tint, cold vibes, whole room underwater/filled with water 
+ with pills streaking down; the pill container will be on its side as if pills spilled)
+ - mirror room (utilizing video, that becomes the texture for every surface in the room;
+ dark with cracks on mirror/video; some static; is immediate image editing possible when
+ using cameras?; filter = inverse colors, high contrast, dark, grainy)
+ - clock room / study room (use audio to get multiple clocks to tick at once; room is 
+ almost round as if in fish eye lens to make it feel like user is in actual clock; 
+ enlargened images of clocks all around, some with hands moving or spinning crazily
+ that stop in their tracks with a mouse click; ALSO with mousepress = no audio)
+ - attic (single skeleton in center; different parts of the body moves when clicked, 
+ eyehole in skull light up, fingers twiddle on one hand, other hand makes a fist, 
+ ribs expand slightly as if emulating breathing, feet twitch/move; single, faint/subtle
+ spotlight on skeleton; no more dustmotes, everything else is black with only faint depth
+ to indicate a room)
+ */
 
 PImage splatterwall;
 PImage bathroom2;
@@ -22,7 +65,7 @@ class Other {
     s1 = ("My sin was not specifically this or that but consisted of having shaken hands"); 
     s2 = (" with the devil. The devil held me in his clutches, the enemy was behind me.");
     s3 = ("nnnnnnnmmmmmmnnnnnmmmmmnnnmuuuuuuuummnuuuwwwwwwwwwwwwwmmmmnnnnnnnwwwwmwmmuuuwwwm");
-    
+
     //BATHROOM
     bathroom2 = loadImage("data/bathroom.jpg");
     wood = loadImage("data/wood.jpg");
@@ -88,7 +131,7 @@ class Other {
       ellipse(random(0, width), random(0, height), random(1, 20), random(1, 10));
     } // for loop BB
     popMatrix();
-    
+
     pushMatrix();
     translate(300, 250, 450);
     //translate(300, 250, 320);
@@ -100,7 +143,7 @@ class Other {
     float r = random(-5, 5);
     //String[] strings = {s1, s2, s3};
     //int s = random{};
-    for (int i = 0; i <= height * 2; i += 100){
+    for (int i = 0; i <= height * 2; i += 100) {
       //fill(252, 22, 0);
       //text(random(for (i =l, random(0 - width/2, 0), 
 
@@ -112,7 +155,7 @@ class Other {
       text(s1, r, r + 5 + i);
       text(s2, r, r + 35 + i);
       text(s3, r, r + 55 + i); 
-      
+
       fill(color(255, 246, 0), 200);  // yellow text top
       text(s3, 5, i);
       //text(s1, 6, 0 + i);
@@ -121,10 +164,8 @@ class Other {
       text(s1, r, 0 + i + r);
       text(s2, r, 20 + i + r);
       text(s3, r, 40 + i + r);
-
     }  // for loop BB
     popMatrix();
-
   }  // artroom method BB
 
   void bathroom() {
@@ -195,7 +236,7 @@ class Other {
     }  // if cam BB
     //image(cam, 0, 0);
     cam.filter(INVERT);
-    //cam.filter(THRESHOLD);
+    cam.filter(THRESHOLD);
     roomBase(cam, cam);
 
 
@@ -225,7 +266,15 @@ class Other {
     popMatrix();
   }  // mirror room method BB
 
-
+  void studyroom() {
+    background(0);
+    lights();
+    //file.play();
+    file.jump(10);
+    file.jump(5);
+    sphere(200);
+    //file.stop();
+  } // studyroom method BB
 
 
   void roomBase(PImage img, PImage floor_img) {

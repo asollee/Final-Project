@@ -1,3 +1,36 @@
+// Parent Realm
+// clean, sharp, sterile, light, white/bright
+
+/*
+- kitchen / slaughterhouse room (all white; white tile floor; two realms have similar
+ layout; window above sink on left side and window at back of room both have billowing
+ curtains (but not too much bc still dollhouse/inside); yellow carnations or chrysanthemums
+ in vase on main table/workspace/island slowly wilts with petals falling with mouseclick)
+ - dining room (single, two-person table in center of room in same position as the 
+ long dining table in other realm, but short/normal sized; minimal plates and silverware,
+ BUT with no food EXCEPT for one, opened chocolate bar on the left side of the table, 
+ maybe interaction with chocolate?, if picked up and dragged around, it leaves a trail
+ whenever it is dragged over the tablecloth; room's back/behind the table is window)
+ - bed room (same four/five beds but with warmer tone colors, lines still very taut and 
+ clean; single window in center has long billowing curtains)
+ - art room / sylum room (a room with all old portraits and paintings; like the style in
+ old, royal houses (look at Frozen); eyes of subjects in portraits follow the mouse)
+ - bathroom (clean, white, simple bathroom; water running in sink; very small pill
+ container at sink, keep it subtle and almost unnoticeable)
+ - mirror room (utilizing video, that becomes the texture for every surface in the room, 
+ clean and bright, video editing for greater brightness, less contrast, and less saturation)
+ - study room / clock room (single wooden desk facing away from camera; single clock
+ on wall above the desk; room rounded in this room too, using 3d space, have the sphere
+ spin, with shallow/subtle streaks as surface texture indicating its movement, showing
+ how this room is in a bubble almost, closed off from the rest of the world, have sphere
+ spin/move with tick of clock?)
+ - attic (bunch of boxes, a coat hanger, typical attic materials; can open boxes and
+ move items and other interaction with mouse clicks and such; clicks to open boxes; clicks
+ to spill contents of specific boxes; can move hat off coat hanger and drop it to floor; 
+ dust mote layer = tiny, tiny, faint, low opacity ellipses or star shapes to resemble 
+ dust motes and use random and collision and array? to create dust mote layer over the 
+ image of this room)
+ */
 
 PImage painting1, painting2, painting3, painting4, painting5, painting6, painting7, 
   portrait1, portrait2, portrait3, portrait4, portrait5, portrait6, portrait7;
@@ -174,6 +207,13 @@ class Parent {
   }  // mirror room method BB
 
 
+  void studyroom() {
+    background(255);
+    lights();
+    //file.play();
+    sphere(200);
+    //file.stop();
+  }
 
   void roomBase(PImage img, PImage floor_img) {
     // ROOM WALLS
